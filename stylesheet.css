@@ -3,6 +3,7 @@ background-color: #E1EEEA;
 color:black ;
 font-size: medium;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
 }
 h1 {
 color: #363F31;
@@ -10,4 +11,13 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h2 {
 color: #D7873B;
+text-shadow: 3px 2px gray;
+}
+img {
+display: block;
+border-radius: 8px;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+
 }
