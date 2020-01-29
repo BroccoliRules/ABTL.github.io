@@ -1,10 +1,13 @@
 body {
-background-color:darkgray;
+background-color: #E1EEEA;
 color:black ;
 font-size: medium;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1 {
-color: darkslategrey;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: #363F31;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+color: #D7873B;
 }
