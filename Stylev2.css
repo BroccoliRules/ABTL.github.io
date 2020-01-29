@@ -13,7 +13,7 @@ body {
 /* Style the header */
 .header {
   grid-area: header;
-  background-color: #f1f1f1;
+  background-color: #363F31;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -54,9 +54,15 @@ body {
 /* Style the footer */
 .footer {
   grid-area: footer;
-  background-color: #f1f1f1;
+  background-color: #363F31;
   padding: 10px;
   text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  position: fixed;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
