@@ -31,9 +31,11 @@ to
         value="Calcuate this H*ck"
         onclick="func();">
 
+<div id="display">
+</div>
+
 <script>
 function func() {
-  function func() {
   var x=document.getElementById("input_value").value;
   var inputtype=document.getElementById("from").value;
   var outputtype=document.getElementById("to").value;
@@ -90,8 +92,10 @@ else
     break;
   }
   }
-  document.write(output)
-}
-}
+  output= Math.round(output * 100)/100;
   
+  document.getElementById("display").innerHTML=output + "<br> I guess it worked"
+}
+
 </script>
+
