@@ -1,10 +1,11 @@
-<html lang="en">
+<h1>The Crappy Unit Converter</h1>
+<p>This probably won't work</p>
 
-<title>The Crappy Unit Converter</title>
-    
-<body>
+<p>
 <input type="text" id="input_value">
+</p>
 
+<p>
  <select id="from">
   <option value="inches">Inches</option>
   <option value="feet">Feet</option>
@@ -14,7 +15,7 @@
    <option value="kilometers">Kilometers</option>
 </select> 
 
-<p> to </p>
+to 
 
 <select id="to">
   <option value="inches">Inches</option>
@@ -24,6 +25,7 @@
    <option value="meters">Meters</option>
    <option value="kilometers">Kilometers</option>
 </select> 
+</p>
 
 <input type=button
         value="Calcuate this H*ck"
@@ -37,7 +39,15 @@ function func() {
   var outputtype=document.getElementById("to").value;
   var output;
   var middle;
-  
+  var output;
+    
+if (inputtype==outputtype)
+  {
+      output = x
+  }
+    
+else 
+  {
   switch(inputtype) {
     case "inches":
       middle = x * 0.0254
@@ -58,12 +68,7 @@ function func() {
       middle = x * 1000
     break;   
   }
-  if (inputtype=outputtype)
-  {
-      output = x
-  }
-  else 
-  {
+ 
   switch (outputtype) {
       case "inches":
       output = 39.3701 * middle
@@ -85,12 +90,8 @@ function func() {
     break;
   }
   }
-  document.write(output);
+  document.write(output)
 }
 }
-    
+  
 </script>
-
-    
-</body>
-</html>
