@@ -58,7 +58,12 @@ function func() {
       middle = x * 1000
     break;   
   }
-  
+  if (inputtype=outputtype)
+  {
+      output = x
+  }
+  else 
+  {
   switch (outputtype) {
       case "inches":
       output = 39.3701 * middle
@@ -79,15 +84,13 @@ function func() {
       output = 0.001 * middle
     break;
   }
-  
+  }
   document.write(output)
 }
 }
     
 </script>
-output{
-    display: output;
-    }
+
     
 </body>
 </html>
