@@ -1,0 +1,85 @@
+<h1>The Crappy Unit Converter</h1>
+
+<input type="text" id="input_value">
+
+ <select id="from">
+  <option value="inches">Inches</option>
+  <option value="feet">Feet</option>
+  <option value="yards">Yards</option>
+  <option value="miles">Miles</option>
+   <option value="meters">Meters</option>
+   <option value="kilometers">Kilometers</option>
+</select> 
+
+<p> to </p>
+
+<select id="to">
+  <option value="inches">Inches</option>
+  <option value="feet">Feet</option>
+  <option value="yards">Yards</option>
+  <option value="miles">Miles</option>
+   <option value="meters">Meters</option>
+   <option value="kilometers">Kilometers</option>
+</select> 
+
+<input type=button
+        value="Calcuate this H*ck"
+        onclick="func();">
+
+<script>
+function func() {
+  function func() {
+  var x=document.getElementById("input_value").value;
+  var inputtype=document.getElementById("from").value;
+  var outputtype=document.getElementById("to").value;
+  var output;
+  var middle;
+  
+  switch(inputtype) {
+    case "inches":
+      middle = x * 0.0254
+    break;
+    case "feet":
+      middle = x * 0.3048
+    break;
+    case "yards":
+      middle = x * 0.9144
+    break;
+    case "miles":
+      middle = x * 1609.34
+    break;
+    case "meters":
+      middle = x
+    break;
+    case "kilometers":
+      middle = x * 1000
+    break;   
+  }
+  
+  switch (outputtype) {
+      case "inches":
+      output = 39.3701 * middle
+    break;
+    case "feet":
+      output = 3.28084 * middle
+    break;
+    case "yards":
+      output = 1.09361 * middle
+    break;
+    case "miles":
+      output = 0.000621371 * middle
+    break;
+    case "meters":
+      output = x
+    break;
+    case "kilometers":
+      output = 0.001 * middle
+    break;
+  }
+  
+  document.write(output)
+}
+
+
+}
+</script>
