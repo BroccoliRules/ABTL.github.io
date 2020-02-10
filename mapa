@@ -12,12 +12,11 @@
 
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>That Famous Preston</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+     
       #map {
         height: 100%;
       }
@@ -31,16 +30,50 @@
   </head>
   <body>
     <div id="map"></div>
-    <script>
+    
+<script>
       var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+      var home = {lat: 42.095302, lng: -111.862463};  
+      var school = {lat: 42.092479, lng: -111.872077};
+      var church = {lat: 42.091674, lng: -111.870585};
+      var kiss1 = {lat: 42.177303, lng: -111.817753};
+      var kiss2 = {lat: 42.106382, lng: -111.818225}; 
+  
+  function initMap() {
+     
+  map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.095186, lng: -111.876680},
+          zoom: 12
+    
+    var marker = new google.maps.Marker({
+    position: home,
+    map: map,
+    title: 'My Home'
+        });
+        var marker = new google.maps.Marker({
+    position: school,
+    map: map,
+    title: 'Preston High School'
+        });
+        var marker = new google.maps.Marker({
+    position: church,
+    map: map,
+    title: 'The Bunker Church'
+        });
+        var marker = new google.maps.Marker({
+    position: kiss1,
+    map: map,
+    title: 'My First Kiss'
+        });
+        var marker = new google.maps.Marker({
+    position: kiss2,
+    map: map,
+    title: 'My Favorite High School Kiss ;)'
         });
       }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
+</script>
+    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
     async defer></script>
   </body>
 </html>
