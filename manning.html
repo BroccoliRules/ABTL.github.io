@@ -1,0 +1,47 @@
+<h1>Manning's Equation Made Fun! </h1>
+
+<form>
+  <input type="radio" name="units" value="english" checked>
+  <label for="english">English</label><br>
+  <input type="radio" name="units" value="si">
+  <label for="si">SI</label>
+</form>
+
+<p>Width: <input type="text" id="width"> </p>
+<p>Depth: <input type="text" id="depth"> </p>
+<p>Slope: <input type="text" id="slope"> </p>
+<p>Manning Coefficient: <input type="text" id="rough"> </p>
+
+<input type=button value="Calculate" onclick="func();">
+
+<script>
+function func() {
+  var w = document.getElementById("width").value;
+  var d = document.getElementById("depth").value;
+  var s = document.getElementById("slope").value;
+  var n = document.getElementById("rough").value;
+  
+  var unit = document.getElementsByName('units');
+  
+  if(document.getElementById('english').checked) {
+     var k = 1.486;
+  }
+  else if(document.getElementById('si').checked) {
+     var k = 1;
+     }
+  
+  var velocity;
+  var area = w*d;
+  var perimeter = w + 2*d;
+  var r = area/perimeter;
+  
+  
+  velocity = (k/n)*r^(2/3)*s^(0.5);
+  
+  document.getElementById("display").innerHTML=velocity
+  
+}
+</script>
+
+<div id="display">
+  
