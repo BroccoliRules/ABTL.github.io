@@ -33,7 +33,7 @@
     <div id="map"></div>
     
 <script>
-      var map;
+      var mymap = {lat: 42.095186, lng: -111.876680};
       var home = {lat: 42.095302, lng: -111.862463};  
       var school = {lat: 42.092479, lng: -111.872077};
       var church = {lat: 42.091674, lng: -111.870585};
@@ -42,31 +42,32 @@
   
   function initMap() {
      
-  map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 42.095186, lng: -111.876680},
-          zoom: 12
-    
-    var marker = new google.maps.Marker({
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: mymap
+          )};
+  
+        var marker1 = new google.maps.Marker({
     position: home,
     map: map,
     title: 'My Home'
         });
-        var marker = new google.maps.Marker({
+        var marker2 = new google.maps.Marker({
     position: school,
     map: map,
     title: 'Preston High School'
         });
-        var marker = new google.maps.Marker({
+        var marker3 = new google.maps.Marker({
     position: church,
     map: map,
     title: 'The Bunker Church'
         });
-        var marker = new google.maps.Marker({
+        var marker4 = new google.maps.Marker({
     position: kiss1,
     map: map,
     title: 'My First Kiss'
         });
-        var marker = new google.maps.Marker({
+        var marker5 = new google.maps.Marker({
     position: kiss2,
     map: map,
     title: 'My Favorite High School Kiss ;)'
