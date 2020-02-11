@@ -1,11 +1,9 @@
 <h1>Manning's Equation Made Fun! </h1>
 
-<form>
-  <input type="radio" name="units" value="english" checked>
-  <label for="english">English</label><br>
-  <input type="radio" name="units" value="si">
-  <label for="si">SI</label>
-</form>
+<select id="units">
+  <option value="english">English</option>
+  <option value="si">SI</option>
+</select>
 
 <p>Width: <input type="text" id="width"> </p>
 <p>Depth: <input type="text" id="depth"> </p>
@@ -16,19 +14,20 @@
 
 <script>
 function func() {
-  var w = document.getElementById("width").value;
-  var d = document.getElementById("depth").value;
-  var s = document.getElementById("slope").value;
-  var n = document.getElementById("rough").value;
+  var w = parseInt(document.getElementById("width").value);
+  var d = parseInt(document.getElementById("depth").value);
+  var s = parseInt(document.getElementById("slope").value);
+  var n = parseInt(document.getElementById("rough").value);
   
   var unit = document.getElementsByName('units');
   
-  if(document.getElementById('english').checked) {
+  if (document.getElementById('units').value == "english") {
      var k = 1.486;
   }
   else {
      var k = 1;
      }
+  alert (k);
   
   var velocity;
   var area = w*d;
@@ -44,4 +43,3 @@ function func() {
 </script>
 
 <div id="display">
-  
