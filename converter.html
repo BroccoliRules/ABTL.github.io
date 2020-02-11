@@ -87,7 +87,7 @@ else
       output = 0.000621371 * middle
     break;
     case "meters":
-      output = x
+      output = middle
     break;
     case "kilometers":
       output = 0.001 * middle
@@ -96,7 +96,7 @@ else
   }
   output= Math.round(output * 100)/100;
   
-  document.getElementById("display").innerHTML=output + "<br> I guess it worked"
+  document.getElementById("display").innerHTML=output
 }
 
 </script>
