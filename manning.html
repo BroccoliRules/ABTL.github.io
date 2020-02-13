@@ -1,17 +1,43 @@
-<link rel="stylesheet" href="stylesheet.css">
-<h1>Manning's Equation Made Fun! </h1>
+<link rel="stylesheet" href="MStyle.css">
+<header>Manning's Equation Made Fun! </header>
 
+<div id="main">
+<article>
+  Unit Type:
 <select id="units">
   <option value="english">English</option>
   <option value="si">SI</option>
 </select>
-
 <p>Width: <input type="text" id="width"> </p>
 <p>Depth: <input type="text" id="depth"> </p>
 <p>Slope: <input type="text" id="slope"> </p>
 <p>Manning Coefficient: <input type="text" id="rough"> </p>
-
 <input type=button value="Calculate" onclick="func();">
+  
+<div id="display">
+</div>
+  
+</article>
+
+<nav>
+  <h1>Navigation</h1>  
+  
+  <ul>
+
+<li><a href="Websote.html">Broccoli with Cheese (first Webpage)</a></li>
+<li><a href="Updated.html">This a prettier site with CSS</a></li>
+<li><a href="converter.html">DO NOT USE THIS CONVERTER</a></li>   
+<li><a href="mapa.html">Preston Idahome</a></li> 
+<li><a href="manning.html">This is a Spooky Equation aka the Manning Equation</a></li>
+<li><a href="">This is a placeholder</a></li>
+</ul>
+  
+</nav>  
+<aside>
+  <h1>About Manning's Equation</h1>
+  <p>Manning's Equation is composed of the cross-sectional area of flow, channel slope, hydraulic radius, and Manning's Roughness Coefficient.</p>
+  <p>The cross-sectional area and hydraulic is calcuated thorugh the width and depth of the channel.  The slope is a measured value.  The roughness coefficient depends on what material the channel is made from. </p>
+</aside>  
 
 <script>
 function func() {
@@ -22,29 +48,34 @@ function func() {
   
   var unit = document.getElementsByName('units');
   
-  if (document.getElementById('units').value == "english") {
-     var k = 1.486;
-  }
+  if(w >= 0 && d>= 0 && s >= 0 && n >= 0) {
+
+    if (document.getElementById('units').value == "english") {
+       var k = 1.486;
+    }
+    else {
+       var k = 1;
+       }
+
+
+    var velocity;
+    var area = w*d;
+    var perimeter = w + 2*d;
+    var r = area/perimeter;
+    var val1= Math.pow(r,2/3);
+    var val2= Math.pow(s,0.5);
+
+    //alert(val2);
+
+    velocity = (k/n)*val1*val2;
+    alert(velocity);
+    document.getElementById("display").innerHTML=velocity
+  } 
   else {
-     var k = 1;
-     }
-  
-  
-  var velocity;
-  var area = w*d;
-  var perimeter = w + 2*d;
-  var r = area/perimeter;
-  var val1= Math.pow(r,2/3);
-  var val2= Math.pow(s,0.5);
-  
-  //alert(val2);
-  
-  velocity = (k/n)*val1*val2;
-  //alert(velocity);
-  document.getElementById("display").innerHTML=velocity
-  
+    alert("you gay")
+  }
 }
 </script>
 
-<div id="display">
+  
 </div>
