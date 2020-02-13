@@ -7,6 +7,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  font-family: helvetica;
+  text-align: center;
+}
+h1{
+  Text-align: center;
+  font-size: 180%;
 }
 #main {
   display: flex;
@@ -22,9 +28,14 @@ body {
 }
 #main > nav {
   order: -1;
+  text-align: left;
 }
 header, footer {
-  <img src='Imagination.png'/>;
+  font-size: 200%;
+  font-weight: bold;
+  font-family: helvetica;
+  color: white;
+  background-image: url('Imagination.png');
   height: 20vh;
 }
 header, footer, article, nav, aside {
