@@ -41,4 +41,8 @@ header, footer {
 header, footer, article, nav, aside {
   padding: 1em;
 }
+#display {
+  font-size: 160%;
+  
+}
 </style>
