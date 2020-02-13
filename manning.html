@@ -14,10 +14,10 @@
 
 <script>
 function func() {
-  var w = parseInt(document.getElementById("width").value);
-  var d = parseInt(document.getElementById("depth").value);
-  var s = parseInt(document.getElementById("slope").value);
-  var n = parseInt(document.getElementById("rough").value);
+  var w = parseFloat(document.getElementById("width").value);
+  var d = parseFloat(document.getElementById("depth").value);
+  var s = parseFloat(document.getElementById("slope").value);
+  var n = parseFloat(document.getElementById("rough").value);
   
   var unit = document.getElementsByName('units');
   
@@ -27,19 +27,23 @@ function func() {
   else {
      var k = 1;
      }
-  alert (k);
+  
   
   var velocity;
   var area = w*d;
   var perimeter = w + 2*d;
   var r = area/perimeter;
+  var val1= Math.pow(r,2/3);
+  var val2= Math.pow(s,0.5);
   
+  //alert(val2);
   
-  velocity = (k/n)*r^(2/3)*s^(0.5);
-  
+  velocity = (k/n)*val1*val2;
+  //alert(velocity);
   document.getElementById("display").innerHTML=velocity
   
 }
 </script>
 
 <div id="display">
+</div>
