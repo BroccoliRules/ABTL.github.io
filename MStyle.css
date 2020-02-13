@@ -40,7 +40,7 @@ header, footer {
   font-family: helvetica;
   color: white;
   background-image: url('Imagination.png');
-  justify-content: center;
+  background-position: center;
   height: 20vh;
 }
 header, footer, article, nav, aside {
