@@ -24,11 +24,14 @@ h1{
 #main > nav, 
 #main > aside {
   flex: 0 0 20vw;
-  background: beige;
+  background: #837E7C;
+  color: #2c3539;
 }
 #main > nav {
   order: -1;
   text-align: left;
+  bbackground: #837E7C;
+  color: #2c3539;
 }
 header, footer {
   font-size: 200%;
