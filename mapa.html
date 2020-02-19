@@ -1,81 +1,70 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="stylesheet.css">
-<style>
-  #map {
-    height: 100%;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-</style>
-
 <html>
-  <head>
-    <title>That Famous Preston</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-     
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+<b>
+  Alex White <br>
+  Assignment 7: Build an interactive Page with Leaflet Open Source Mapping API <br>
+  CEEN 514 <br>
+  2/18/2020
+  </b>
+  
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  
+  <style>
+  #mapid { height: 90vh; }  
+  </style>
+
+
   <body>
-    <div id="map"></div>
-    
-<script>
-      var mymap = {lat: 42.095186, lng: -111.876680};
-      var home = {lat: 42.095302, lng: -111.862463};  
-      var school = {lat: 42.092479, lng: -111.872077};
-      var church = {lat: 42.091674, lng: -111.870585};
-      var kiss1 = {lat: 42.177303, lng: -111.817753};
-      var kiss2 = {lat: 42.106382, lng: -111.818225}; 
-  
-  function initMap() {
-     
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: mymap
-          )};
-  
-        var marker1 = new google.maps.Marker({
-    position: home,
-    map: map,
-    title: 'My Home'
-        });
-        var marker2 = new google.maps.Marker({
-    position: school,
-    map: map,
-    title: 'Preston High School'
-        });
-        var marker3 = new google.maps.Marker({
-    position: church,
-    map: map,
-    title: 'The Bunker Church'
-        });
-        var marker4 = new google.maps.Marker({
-    position: kiss1,
-    map: map,
-    title: 'My First Kiss'
-        });
-        var marker5 = new google.maps.Marker({
-    position: kiss2,
-    map: map,
-    title: 'My Favorite High School Kiss ;)'
-        });
-      }
-</script>
-    
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXS6eLxCWdf31JokswS3GbO582iuY0PqI&callback=initMap"
-    async defer></script>
+      <div id="mapid"></div>
+    <title>My first Leaflet Map</title>
+    <p>By your's truely, Alex White</p>
   </body>
+    
+    
+    
+    
+    
+  <script>
+var map = L.map('mapid').setView([42.095186, -111.876680], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([42.095302, -111.862463]).addTo(map)
+    .bindPopup('My house.')
+    .openPopup();
+L.marker([42.092479, -111.872077]).addTo(map)
+    .bindPopup('My high school.')
+    .openPopup(); 
+L.marker([42.091674, -111.870585]).addTo(map)
+    .bindPopup('This is my church.')
+    .openPopup();
+L.marker([42.177303, -111.817753]).addTo(map)
+    .bindPopup('My first kiss location.')
+    .openPopup();
+L.marker([42.106382, -111.818225]).addTo(map)
+    .bindPopup('My favorite high school kiss;)')
+    .openPopup();
+
+ var polygon = L.polygon([
+    [42.095146, -111.862150],
+    [42.094995, -111.862692],
+    [42.095496, -111.862711],
+    [42.095560, -111.862520]
+]).addTo(map);
+
+var circle = L.circle([42.095302, -111.862463], {
+    color: 'green',
+    fillColor: '#DAF7A6',
+    fillOpacity: 0.2,
+    radius: 800
+}).addTo(map);
+  </script>
+  
 </html>
