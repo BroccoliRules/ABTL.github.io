@@ -1,0 +1,13 @@
+body,h1 {
+  font-family: "Raleway", sans-serif
+}
+body, html {
+  height: 100%;
+  text-align: center;
+}
+.bgimg {
+  background-image: ;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
