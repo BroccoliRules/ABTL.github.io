@@ -52,6 +52,12 @@
             format: 'image/png', //depends on what you want to load in
             transparent: true,
         }).addTo(map);
+        
+         let Polygon = L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-0bc744ec99cb47029d68d9481c3ef944/wms?', {
+            layers: 'Polygon', 
+            format: 'image/png', //depends on what you want to load in
+            transparent: true,
+        }).addTo(map);
     </script>
 
 </html>
